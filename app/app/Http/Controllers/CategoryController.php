@@ -132,7 +132,7 @@ class CategoryController extends Controller
             $time = md5(time().$FileName);
             $fileName = $time.'.'.$ext;
             // $file->move('images/category/', $fileName);
-           Image::make($request->file('image'))->resize(849, 227)->save('images/category/' . $fileName);
+           Image::make($request->file('image'))->save('images/category/' . $fileName);
             $category->image = $fileName;
         }else{
             $category->image =  $category->image;  
