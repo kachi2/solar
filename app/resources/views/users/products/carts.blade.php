@@ -115,9 +115,8 @@
                     </div>
                 </div>
                 <?php }else{ ?>
-                <div style="background:#eee; text-align:center">
-               <img src="{{asset('/frontend/images/empty-cart.png')}}"> 
-           <h5 style="color:#fed700"> Your Cart is Empty </h5>
+                <div style="background:#eee; text-align:center" class="p-3">
+               <img src="{{asset('/images/images.png')}}"> 
            @guest
            <p>Don't have an account <strong style="color:#fed700"><a href="{{route('register')}}">Register</a></strong> OR <strong style="color:#fed700"><a href="{{route('login')}}">Login</a></strong> to continue shopping</p>
                @else
