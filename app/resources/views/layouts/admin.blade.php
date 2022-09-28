@@ -30,11 +30,7 @@
   <div>
         <ul class="navbar-nav">
             <!-- begin::navigation-toggler -->
-            <li class="nav-item navigation-toggler">
-                <a href="#" class="nav-link" title="Hide navigation">
-                    <i data-feather="arrow-left"></i>
-                </a>
-            </li>
+            
             <li class="nav-item navigation-toggler mobile-toggler">
                 <a href="#" class="nav-link" title="Show navigation">
                     <i data-feather="menu"></i>
