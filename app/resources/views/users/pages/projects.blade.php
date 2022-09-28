@@ -21,7 +21,7 @@
 
     <div class="container">
         <div class="row">
-            <div class="col-xl-9 col-wd">
+            <div class="col-xl-8 col-wd">
                 <div class="max-width-1100-wd">
                     @foreach ($projects as $project )
                     <article class="card mb-13 border-0">

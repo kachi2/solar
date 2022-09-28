@@ -1,8 +1,6 @@
 @extends('layouts.app')
 @section('content')
-
 <main id="content" role="main">
-    <!-- breadcrumb -->
     <div class="bg-gray-13 bg-md-transparent">
         <div class="container">
             <!-- breadcrumb -->
@@ -17,8 +15,6 @@
             <!-- End breadcrumb -->
         </div>
     </div>
-    <!-- End breadcrumb -->
-
     <div class="container">
         <div class="row">
             <div class="col-xl-9 col-wd">
@@ -27,7 +23,7 @@
                     <article class="card mb-13 border-0">
                         <div class="row">
                             <div class="col-lg-4 mb-5 mb-lg-0">
-                                <a href="#" class="d-block"><img class="img-fluid min-height-250 object-fit-cover" src="{{asset('/images/news/'.$blog->image)}}" alt="Image Description"></a>
+                                <a href="#" class="d-block"><img class="img-fluid min-height-250 object-fit-cover" src="{{asset('/images/news/'.$blog->image)}}" alt="{{asset('/images/news/'.$blog->image)}}"></a>
                             </div>
                             <div class="col-lg-8">
                                 <div class="card-body p-0">
@@ -54,7 +50,6 @@
                     <div class="border-bottom border-color-1 mb-5">
                         <h3 class="section-title section-title__sm mb-0 pb-2 font-size-18">Recent Posts</h3>
                     </div>
-
                     @foreach ($recent as $post )
                     <article class="mb-4">
                         <div class="media">

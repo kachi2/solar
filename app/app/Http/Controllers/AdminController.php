@@ -287,18 +287,20 @@ class AdminController extends Controller
         }
         $dd = json_encode($imageFile);
         $project->images = $dd;
+        $project->image = $imageFile[0];
        }
+    
        if($project->save()){
        \Session::flash('alert', 'sucess');
        \Session::flash('msg','Project added Successfully');
        return back();
     }
         \Session::flash('alert', 'error');
-       \Session::flash('msg','Request Failed, something went wrong');
+         \Session::flash('msg','Request Failed, something went wrong');
        return back();
     }
 
-    public function ProjectDetele($id){
+    public function ProjectDelete($id){
         $project = Project::find(decrypt($id));
         $project->delete();
         \Session::flash('alert', 'error');
