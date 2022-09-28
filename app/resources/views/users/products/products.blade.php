@@ -180,6 +180,10 @@
                                     <li class="nav-item flex-shrink-0 flex-xl-shrink-1 z-index-2">
                                         <a class="nav-link active" id="Jpills-one-example1-tab" data-toggle="pill" href="#Jpills-one-example1" role="tab" aria-controls="Jpills-one-example1" aria-selected="true">Description</a>
                                     </li>
+
+                                    <li class="nav-item flex-shrink-0 flex-xl-shrink-1 z-index-2">
+                                        <a class="nav-link" id="Jpills-two-example1-tab" data-toggle="pill" href="#Jpills-two-example1" role="tab" aria-controls="Jpills-two-example1" aria-selected="true">Specification</a>
+                                    </li>
                                    
                                     <li class="nav-item flex-shrink-0 flex-xl-shrink-1 z-index-2">
                                         <a class="nav-link" id="Jpills-four-example1-tab" data-toggle="pill" href="#Jpills-four-example1" role="tab" aria-controls="Jpills-four-example1" aria-selected="false">Reviews</a>
@@ -193,6 +197,10 @@
                                       
                                        <p>{!!$product->description!!}</p>
                                     </div>
+                                    <div class="tab-pane fade" id="Jpills-two-example1" role="tabpanel" aria-labelledby="Jpills-two-example1-tab">
+                                      
+                                        <p>{!!$product->specification!!}</p>
+                                     </div>
                                    
                                     
                                     <div class="tab-pane fade" id="Jpills-four-example1" role="tabpanel" aria-labelledby="Jpills-four-example1-tab">

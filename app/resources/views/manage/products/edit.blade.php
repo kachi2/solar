@@ -86,6 +86,20 @@
 
                                          </div>
 
+                                         <div class="col-md-12">
+                                          <div class="form-group">
+                                            
+                                            <textarea id="summernote" class="@error('specification') is-invalid @enderror" name="specification"> {{$product->specification}}</textarea>
+                                             <small id="emailHelp" class="form-text text-muted">Product Specification
+                                                    </small>
+                                                    @error('specification')
+                                                    <span class="invalid-feedback"> <small> *</small> </span>
+                                                    @enderror
+                                            </div>
+        
+        
+                                                 </div>
+
 
                                                <div class="col-md-6">
                                   <div class="custom-file">

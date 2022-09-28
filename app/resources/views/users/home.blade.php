@@ -132,7 +132,6 @@
 			</div>
 		</div>
 		<!-- End Deals-and-tabs -->
-
 	@if(count($recents) > 0)
 	<div class="mb-6">
 		<div class="d-flex justify-content-between align-items-center border-bottom border-color-1 flex-lg-nowrap flex-wrap mb-4">
@@ -140,7 +139,6 @@
 		</div>
 		<ul class="row list-unstyled products-group no-gutters">
 			 @foreach($recents as $recent)
-			 
 			<li class="col-6 col-md-3 col-xl-2gdot4-only col-wd-2 product-item">
 				<div class="product-item__outer h-100">
 					<div class="product-item__inner px-xl-4 p-3">

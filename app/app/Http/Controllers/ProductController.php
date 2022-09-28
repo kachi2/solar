@@ -139,6 +139,7 @@ class ProductController extends Controller
         $prod->sub_category_id = $request->category_id;
         $prod->category_id = $cat->category->id;
         $prod->description = $request->description;
+        $prod->specification = $request->specification;
         $prod->price = $request->price;
         $prod->admin_id = auth('admin')->user()->id;
         $prod->sale_price = $request->sale_price;
@@ -192,12 +193,7 @@ class ProductController extends Controller
                 $pp->qty = $qty[$key];
                 $pp->product_id = $eid->id;
                 $pp->save(); 
-                //print_r($pp);
-    
-
             }
-
-          //  dd($pp);
             
         }
     }
@@ -270,6 +266,7 @@ class ProductController extends Controller
           $prod->name= $request->name;
           $prod->category_id = $request->category_id;
           $prod->description = $request->description;
+          $prod->specification = $request->specification;
           $prod->price = $request->price;
           $prod->sale_price = $request->sale_price;
           $prod->design_fee = $request->design_fee;
