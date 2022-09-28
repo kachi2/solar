@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title> SolarSofar | Admin</title>
     <!-- Favicon -->
-    <link rel="shortcut icon" href="{{asset('/images/fav2.png')}}"/>
+    
  <link rel="stylesheet" href="{{asset('/backend/vendors/dataTable/dataTables.min.css')}}" type="text/css">
   <link rel="icon" href="{{asset('/images/fav.png')}}">
     <!-- Plugin styles -->

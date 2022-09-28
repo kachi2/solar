@@ -6,7 +6,7 @@
 
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <title> @yield('title')  {{ config('app.name', 'sofarsolar')}} </title>
-           <link rel="shortcut icon" href="../../favicon.png">
+    <link rel="icon" href="{{asset('/images/fav2.png')}}">
             <!-- Google Fonts -->
             <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i&display=swap" rel="stylesheet">
             <!-- CSS Implementing Plugins -->
