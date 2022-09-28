@@ -86,14 +86,14 @@ class NewsController extends Controller
              $image = $request->file('image');
              $ex = $image->getClientOriginalExtension();
              $fileName = time().".".$ex;
-             Image::make(request()->file('image'))->resize(1920,598)->save('images/news/'.$fileName);
+             Image::make(request()->file('image'))->resize(500,500)->save('images/news/'.$fileName);
              $news->image = $fileName;
         }
        if($request->file('images')){
          foreach($request->file('images') as $images){
              $ex = $images->getClientOriginalExtension();
              $fileNames = time().".".$ex;
-             Image::make($images)->resize(500,500)->save('images/news/'.$fileNames);
+             Image::make($images)->save('images/news/'.$fileNames);
              $imageFile[] = $fileNames;
          }
          $dd = json_encode($imageFile);

@@ -94,7 +94,7 @@ class PagesController extends Controller
             $image = $request->file('image');
             $ex = $image->getClientOriginalExtension();
             $fileName = time().'.'.$ex;
-            Image::make(request()->file('image'))->resize(1920,800)->save('images/sliders/'.$fileName);
+            Image::make(request()->file('image'))->save('images/sliders/'.$fileName);
         }
             Slider::create([
                 'image' => $fileName,
