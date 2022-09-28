@@ -206,8 +206,8 @@
             <div>
                 <div id="navigation-logo">
                     <a href="{{route('admin.index')}}">
-                        <img class="logo" src="{{asset('/frontend/images/logo.png')}}" height="auto" width="120px">
-                        <img class="logo-light" src="{{asset('/frontend/images/logo.png')}}" height="auto" width="120px" alt="light logo">
+                        <img class="logo" src="{{asset('/images/logo.png')}}" height="auto" width="120px">
+                        <img class="logo-light" src="{{asset('/images/logo.png')}}" height="auto" width="120px" alt="light logo">
                     </a>
                 </div>
             </div>
@@ -282,7 +282,7 @@
                      <li>
                         <a  href="" data-toggle="tooltip" data-placement="right" title="View User's activities"
                            data-nav-target="#dashboards">
-                            <i data-feather="trending-up"></i>&nbsp; News</a>
+                            <i data-feather="server"></i>&nbsp; News</a>
                             <ul>
                                   <li><a href="{{route('admin.news.create')}}">Post News</a></li>
                                   <li><a href="{{route('admin.news.index')}}">Manage News</a></li>
@@ -291,7 +291,7 @@
                         <li>
                             <a  href="" data-toggle="tooltip" data-placement="right" title="View User's activities"
                                data-nav-target="#dashboards">
-                                <i data-feather="trending-up"></i>&nbsp; Projects</a>
+                                <i data-feather="package"></i>&nbsp; Projects</a>
                                 <ul>
                                       <li><a href="{{route('admin.project.create')}}">Add Projects</a></li>
                                       <li><a href="{{route('admin.project.index')}}">Manage Projects</a></li>
