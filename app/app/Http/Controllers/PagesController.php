@@ -121,7 +121,8 @@ class PagesController extends Controller
                 return app('App\Http\Controllers\HomeController')->Index();
                 break;
             case "projects":
-             return view('users.pages.projects')->with('projects', Project::latest()->get());
+             return view('users.pages.projects')->with('projects', Project::inRandomOrder()->get())
+                ->with('recent', Project::take(5)->latest()->get());
                 break;
             case "products":
                 $products['prod'] = Product::take(5)->orderBy('created_at','desc')->get();

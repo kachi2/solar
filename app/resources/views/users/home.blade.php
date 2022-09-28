@@ -134,79 +134,45 @@
 		<!-- End Deals-and-tabs -->
 
 	@if(count($recents) > 0)
-		<div class="mb-6">
-			<div class="position-relative">
-				<div class="border-bottom border-color-1 mb-2">
-					<h3 class="section-title mb-0 pb-2 font-size-22">Recently Viewed</h3>
-				</div>
-				<div class="js-slick-carousel u-slick position-static overflow-hidden u-slick-overflow-visble pb-7 pt-2 px-1"
-					data-pagi-classes="text-center right-0 bottom-1 left-0 u-slick__pagination u-slick__pagination--long mb-0 z-index-n1 mt-3 mt-md-0"
-					data-slides-show="5"
-					data-slides-scroll="1"
-					data-arrows-classes="position-absolute top-0 font-size-17 u-slick__arrow-normal top-10"
-					data-arrow-left-classes="fa fa-angle-left right-1"
-					data-arrow-right-classes="fa fa-angle-right right-0"
-					data-responsive='[{
-					  "breakpoint": 1400,
-					  "settings": {
-						"slidesToShow": 6
-					  }
-					}, {
-						"breakpoint": 1200,
-						"settings": {
-						  "slidesToShow": 4
-						}
-					}, {
-					  "breakpoint": 992,
-					  "settings": {
-						"slidesToShow": 3
-					  }
-					}, {
-					  "breakpoint": 768,
-					  "settings": {
-						"slidesToShow": 2
-					  }
-					}, {
-					  "breakpoint": 554,
-					  "settings": {
-						"slidesToShow": 2
-					  }
-					}]'>
-					@foreach ($recents as $view )
-					<div class="js-slide products-group">
-						<div class="product-item">
-							<div class="product-item__outer h-100">
-								<div class="product-item__inner px-wd-4 p-2 p-md-3">
-									<div class="product-item__body pb-xl-2">
-										<div class="mb-2"><a href="{{route('product-details',encrypt($view->id))}}" class="font-size-12 text-gray-5">{{$view->category->name}}</a></div>
-										<h5 class="mb-1 product-item__title"><a href="{{route('product-details', encrypt($pro->id))}}" class="text-blue font-weight-bold">{{$pro->name}}</a></h5>
-										<div class="mb-2">
-											<a href="{{route('product-details', encrypt($view->id))}}" class="d-block text-center"><img class="img-fluid" src="{{asset('/images/products/'.$view->image)}}" alt="Image Description"></a>
-										</div>
-										<div class="flex-center-between mb-1">
-											<div class="prodcut-price">
-												<div class="text-gray-100">₦{{number_format($view->price)}}</div>
-											</div>
-											<div class="d-none d-xl-block prodcut-add-cart">
-												<a href="{{route('product-details', encrypt($view->id))}}" class="btn-add-cart btn-primary transition-3d-hover"><i class="ec ec-add-to-cart"></i></a>
-											</div>
-										</div>
-									</div>
-									<div class="product-item__footer">
-										<div class="border-top pt-2 flex-center-between flex-wrap">
-											{{-- <a href="../shop/compare.html" class="text-gray-6 font-size-13"><i class="ec ec-compare mr-1 font-size-15"></i> Compare</a>
-											<a href="../shop/wishlist.html" class="text-gray-6 font-size-13"><i class="ec ec-favorites mr-1 font-size-15"></i> Wishlist</a> --}}
-										</div>
-									</div>
+	<div class="mb-6">
+		<div class="d-flex justify-content-between align-items-center border-bottom border-color-1 flex-lg-nowrap flex-wrap mb-4">
+			<h3 class="section-title mb-0 pb-2 font-size-22">Recently Viewed</h3>
+		</div>
+		<ul class="row list-unstyled products-group no-gutters">
+			 @foreach($recents as $recent)
+			 
+			<li class="col-6 col-md-3 col-xl-2gdot4-only col-wd-2 product-item">
+				<div class="product-item__outer h-100">
+					<div class="product-item__inner px-xl-4 p-3">
+						<div class="product-item__body pb-xl-2">
+							<div class="mb-2"><a href="{{route('user.category',encrypt($recent->category->id))}}" class="font-size-12 text-gray-5">{{$recent->category->name}}</a></div>
+							<hr>
+							<h5 class="mb-1 product-item__title"><a href="{{route('product-details',encrypt($recent->id))}}" class="text-blue font-weight-bold">{{$recent->name}}</a></h5>
+							<div class="mb-2">
+								<a href="{{route('product-details',encrypt($recent->id))}}" class="d-block text-center"><img class="img-fluid" src="{{asset('images/products/'.$recent->image)}}" alt="Image Description"></a>
+							</div>
+							<div class="flex-center-between mb-1">
+								<div class="prodcut-price">
+									  <div class="text-gray-100">₦{{number_format($recent->sale_price)}}</div>
+											 <del style="font-size:13px">₦{{number_format($recent->price)}}</del>
+								</div>
+								<div class="d-none d-xl-block prodcut-add-cart">
+									<a href="{{route('product-details',encrypt($recent->id))}}" class="btn-add-cart btn-primary transition-3d-hover"><i class="ec ec-add-to-cart"></i></a>
 								</div>
 							</div>
 						</div>
+						<div class="product-item__footer">
+							<div class="border-top pt-2 flex-center-between flex-wrap">
+							   
+								<a href="{{route('product-details',encrypt($recent->id))}}" class="text-gray-6 font-size-13"><i class="ec ec-favorites mr-1 font-size-15"></i>Add to Cart</a>
+							</div>
+						</div>
 					</div>
-					@endforeach
-					
 				</div>
-			</div>
-		</div>
+			</li>
+			 @endforeach
+		</ul>
+	</div>
 		@endif
 		
 	</div>

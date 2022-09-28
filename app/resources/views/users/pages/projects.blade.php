@@ -21,11 +21,11 @@
 
     <div class="container">
         <div class="row">
-            <div class="col-xl-12 col-wd">
+            <div class="col-xl-9 col-wd">
                 <div class="max-width-1100-wd">
                     @foreach ($projects as $project )
                     <article class="card mb-13 border-0">
-                        <div class="js-slick-carousel u-slick overflow-hidden"
+                        <div class="js-slick-carousel u-slick overflow-hidden"  data-autoplay="true" data-speed="7000"
                             data-pagi-classes="js-pagination u-slick__pagination u-slick__pagination--long u-slick__pagination--hover mb-0">
                             @php $imag = json_decode($project->images) @endphp
                             @foreach ($imag as $proj )
@@ -42,6 +42,31 @@
                     @endforeach
                 </div>
             </div>
+
+            <div class="col-xl-3 col-wd">
+                <aside class="mb-7">
+                    <div class="border-bottom border-color-1 mb-5">
+                        <h3 class="section-title section-title__sm mb-0 pb-2 font-size-18">Latest Projects</h3>
+                    </div>
+
+                    @foreach ($recent as $post )
+                    <article class="mb-4">
+                        <div class="media">
+                            <div class="width-75 height-75 mr-3">
+                                <img class="img-fluid object-fit-cover" src="{{asset('/images/projects/'.$post->image)}}" alt="Image Description">
+                            </div>
+                            <div class="media-body">
+                                <h4 class="font-size-14 mb-1"><a href="../blog/single-blog-post.html" class="text-gray-39">{{$post->title}}</a></h4>
+                                <span class="text-gray-5">{{$post->created_at->format('d/m/y')}}</span>
+                            </div>
+                        </div>
+                    </article>
+                    @endforeach
+                    
+                </aside>
+                
+            </div>
+
         </div>
     </div>
 </main>
