@@ -11,7 +11,7 @@
                             <div class="d-flex justify-content-between align-items-center">
                                 <div>
                                     <h2 class="font-weight-bold mb-2">{{$products}}</h2>
-                                    <div>Total Designs</div>
+                                    <div>Total Products</div>
                                 </div>
                                 <div>
                                     <span class="dashboard-pie-1">{{$products}}/100</span>
