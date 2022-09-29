@@ -281,7 +281,7 @@ class AdminController extends Controller
         foreach($request->file('images') as $images){
             $ex = $images->getClientOriginalExtension();
             $fileNames = time().".".$ex;
-            Image::make($images)->save('images/projects/'.$fileNames);
+            Image::make($images)->resize(532,800)->save('images/projects/'.$fileNames);
             $imageFile[] = $fileNames;
             sleep(1);
         }
