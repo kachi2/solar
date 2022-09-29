@@ -30,7 +30,7 @@
                             @php $imag = json_decode($project->images) @endphp
                             @foreach ($imag as $proj )
                             <div class="js-slide">
-                                <a href="" class="d-block"><img class="img-fluid" src="{{asset('/images/projects/'.$proj)}}" alt="Image Description"></a>
+                                <a href="" class="d-block"><img class="img-fluid" src="{{asset('/images/projects/'.$proj)}}" alt="{{asset('/images/projects/'.$proj)}}"></a>
                             </div>
                             @endforeach
                         </div>
