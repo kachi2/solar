@@ -28,15 +28,15 @@ class PagesController extends Controller
             'name' => 'required'
         ]);
         if($valid->fails()){
-            Session::flash('alert', 'error');
-            Session::flash('msg','Some fields are missing');
+            \Session::flash('alert', 'error');
+            \Session::flash('message','Some fields are missing');
             return back();
         }
          Menu::create([
             'name' => $request->name
          ]);
          \Session::flash('alert', 'success');
-         \Session::flash('msg','Menu created successfully');
+         \Session::flash('message','Menu created successfully');
          return back();
 
     }
@@ -62,7 +62,7 @@ class PagesController extends Controller
         $id = Menu::where('id', decrypt($id))->first()
         ->update(['name' => $request->name]);
         \Session::flash('alert', 'success');
-        \Session::flash('msg','Menu updated successfully');
+        \Session::flash('message','Menu updated successfully');
         return back();
     }
 
@@ -87,7 +87,7 @@ class PagesController extends Controller
        
         if($valid->fails()){
             \Session::flash('alert', 'error');
-            \Session::flash('msg','Some fields are missing');
+            \Session::flash('message','Some fields are missing');
             return back(); 
         }
         if($request->file('image')){
@@ -101,7 +101,7 @@ class PagesController extends Controller
                 'name' => $request->name
             ]);
             \Session::flash('alert', 'success');
-            \Session::flash('msg','Slider Added Successfully');
+            \Session::flash('message','Slider Added Successfully');
             return back(); 
         
 
@@ -111,7 +111,7 @@ class PagesController extends Controller
         $id = Slider::where('id', decrypt($id))->first();
         $id->delete();
         \Session::flash('alert', 'error');
-        \Session::flash('msg','Slider deleted Successfully');
+        \Session::flash('message','Slider deleted Successfully');
         return back();
     }
 

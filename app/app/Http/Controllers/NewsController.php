@@ -37,7 +37,7 @@ class NewsController extends Controller
   
         if($valid->fails()){
         \Session::flash('alert', 'error');
-        \Session::flash('msg','Some field are missing');
+        \Session::flash('message','Some field are missing');
         return back();
         }
        $news = new News;
@@ -63,11 +63,11 @@ class NewsController extends Controller
        }
        if($news->save()){
        Session::flash('alert', 'sucess');
-       Session::flash('msg','News added Successfully');
+       Session::flash('message','News added Successfully');
        return back();
     }
         Session::flash('alert', 'error');
-       Session::flash('msg','Request Failed, something went wrong');
+       Session::flash('message','Request Failed, something went wrong');
        return back();
     }
 
@@ -101,11 +101,11 @@ class NewsController extends Controller
         }
         if($news->save()){
         Session::flash('alert', 'sucess');
-        Session::flash('msg','News Updated Successfully');
+        Session::flash('message','News Updated Successfully');
         return back();
      }
         Session::flash('alert', 'error');
-        Session::flash('msg','Request Failed, something went wrong');
+        Session::flash('message','Request Failed, something went wrong');
         return back();
     }
 

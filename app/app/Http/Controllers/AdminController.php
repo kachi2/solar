@@ -247,7 +247,7 @@ class AdminController extends Controller
         }
         return redirect()->back();
         \Session::flash('alert', 'success');
-        \Session::flash('msg','Notification clear');
+        \Session::flash('message','Notification clear');
     }
 
     public function ProjectIndex(){
@@ -271,7 +271,7 @@ class AdminController extends Controller
   
         if($valid->fails()){
         \Session::flash('alert', 'error');
-        \Session::flash('msg','Some field are missing');
+        \Session::flash('message','Some field are missing');
         return back();
         }
        $project = new Project;
@@ -292,11 +292,11 @@ class AdminController extends Controller
     
        if($project->save()){
        \Session::flash('alert', 'sucess');
-       \Session::flash('msg','Project added Successfully');
+       \Session::flash('message','Project added Successfully');
        return back();
     }
         \Session::flash('alert', 'error');
-         \Session::flash('msg','Request Failed, something went wrong');
+         \Session::flash('message','Request Failed, something went wrong');
        return back();
     }
 
@@ -304,7 +304,7 @@ class AdminController extends Controller
         $project = Project::find(decrypt($id));
         $project->delete();
         \Session::flash('alert', 'error');
-       \Session::flash('msg','Project deleted Successfully');
+       \Session::flash('message','Project deleted Successfully');
         return back();
     }
 
