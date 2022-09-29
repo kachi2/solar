@@ -8,18 +8,18 @@
 		<div class="bg-img-hero" style="background-image: url('{{asset('/images/sliders/'.$sliders[0]->image)}}'); ">
 			<div class="container min-height-500 overflow-hidden">
 				<div class="js-slick-carousel u-slick" data-autoplay="true" data-speed="7000"
-					data-pagi-classes="text-center position-absolute right-0 bottom-0 left-0 u-slick__pagination u-slick__pagination--long justify-content-start mb-3 mb-md-4 offset-xl-3 pl-2 pb-1">
+					data-pagi-classes="text-center position-absolute right-0 bottom-0 left-0 u-slick__pagination u-slick__pagination--long justify-content-start mb-3 mb-md-4 offset-xl-5 pl-2 pb-1">
 					@foreach ($sliders as $slider)
 					<div class="js-slide bg-img-hero-center">
 						<div class="row min-height-500 py-1 py-md-0">
-							<div class="offset-xl-2 col-xl-2 col-1 mt-md-2">
+							<div class="col-xl-2 col-xl-2 col-1 mt-md-2">
 								<h1 class="font-size-64 text-lh-57 font-weight-light"
 									data-scs-animation-in="fadeInUp">
 								</h1>
 							</div>
-							<div class="col-xl-9 col-9  d-flex align-items-center"
+							<div class="col-xl-8 col-8  d-flex align-items-center"
 								data-scs-animation-delay="500"
-								data-slides-show="5"
+								data-slides-show=""
 								data-slides-scroll="7"
 								data-scs-animation-in="fadeIn"
 								data-responsive='[{
