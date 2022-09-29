@@ -1,7 +1,7 @@
 
      @extends('layouts.app')
      @section('content')
-     @section('title', $title);
+     @section('title', $title)
       <main id="content" role="main">
             <!-- breadcrumb -->
             <div class="bg-gray-13 bg-md-transparent">
