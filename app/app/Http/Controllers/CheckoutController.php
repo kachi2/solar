@@ -230,6 +230,9 @@ class CheckoutController extends Controller
                     $orders = Order::where('user_id', auth()->user()->id)->latest()->first();
                     \Session::flash('success', 'Order was sent successfully');
                      \Cart::destroy();
+                     $admin = new AdminNotify;
+                     $admin->message = 'New customer order completed Order No: '.$order->order_No;
+                     $admin->save();
                      return view('users.products.orders', compact('items', 'orders'))->with('success', 'Order was sent successfully');
                  }
         }
@@ -347,6 +350,9 @@ class CheckoutController extends Controller
                  \Cart::destroy();
                  $orders = Order::where('user_id', $getUser->id)->latest()->first();
                  \Session::flash('success', 'Order was sent successfully');
+                 $admin = new AdminNotify;
+                 $admin->message = 'New customer order completed <br>'.'Order No'.$order->order_No;
+                 $admin->save();
                  return view('users.products.completed', compact('items', 'orders'))->with('success', 'Order completed successfully');
         } else {
             //Dont Give Value and return to Failure page
