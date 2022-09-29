@@ -25,7 +25,7 @@
                                         <table id="myTable" class="table table-striped table-bordered">
                                            <thead>
                                             <tr>
-                                                <th>Order No</th>
+                                                
                                                 <th>Receiver Name</th>
                                                   <th>Receiver Email</th>
                                                 <th>Phone</th>
@@ -42,9 +42,6 @@
                                             <tr>
                                             @if(isset($shipping))
                                             
-                                                <td>
-                                                    <a href="#">{{$shipping->order_No}}</a>
-                                                </td>
                                                 <td>
                                                     <a href="#">{{$shipping->receiver_name}}</a>
                                                 </td>

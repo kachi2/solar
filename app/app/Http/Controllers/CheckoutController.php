@@ -143,7 +143,7 @@ class CheckoutController extends Controller
             return redirect()->route('index');
         }
 
-        $orderNo = rand(1111111,999999);
+        $orderNo = rand(111111111,99999999);
         foreach($cart as $cat){
             $order_list = new orderItem;
             $order_list->order_No = $orderNo;
@@ -229,8 +229,8 @@ class CheckoutController extends Controller
                     ->with('cart', \Cart::content());
                     }else{
                     $items = orderItem::where(['order_No' => $orderNo->order_No])->get();
-                    \Cart::destroy();
                     $orders = Order::where('user_id', auth()->user()->id)->latest()->first();
+                    \Session::flash('success', 'Order was sent successfully');
                      \Cart::destroy();
                      return view('users.products.orders', compact('items', 'orders'))->with('success', 'Order was sent successfully');
                  }
@@ -348,6 +348,7 @@ class CheckoutController extends Controller
                  $items = orderItem::where(['order_No' => $order->order_No])->get();
                  \Cart::destroy();
                  $orders = Order::where('user_id', $getUser->id)->latest()->first();
+                 \Session::flash('success', 'Order was sent successfully');
                  return view('users.products.completed', compact('items', 'orders'))->with('success', 'Order completed successfully');
         } else {
             //Dont Give Value and return to Failure page

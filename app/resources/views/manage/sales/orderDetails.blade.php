@@ -24,24 +24,25 @@
                                  <div class="table-responsive">
                                         <table id="myTable" class="table table-striped table-bordered">
                                            <thead>
-                                            <tr><th class="text-left">S/N</th>
+                                            <tr>
+                                                <th></th>
                                                 <th>Order No</th>
                                                 <th>Product Name</th>
                                                   <th>Price</th>
                                                 <th>Quantity</th>
-                                                <th>Design Fee</th>
-                                                <th>Customer Design</th>
-                                                  <th>Customer Request</th>
+                                             
                                                  <th>Created At</th>
-                                                 <th></th>
+                                                
                                             </tr>
                                             </thead>
                                             <tbody>
                                         @if(count($ordersItems) > 0)
                                         @foreach ($ordersItems as  $sp)
                                             <tr>
-                                            <td>{{$sp->id}}</td>
-                                               
+                                        
+                                                <td>
+                                                    <img src="{{asset('/images/products/'.$sp->image)}}" width="50px" height="50px"> 
+                                                </td>
                                                 <td>
                                                     <a href="#">{{$sp->order_No}}</a>
                                                 </td>
@@ -55,31 +56,15 @@
                                                   <td>
                                                     <a href="#">{{$sp->qty}}</a>
                                                 </td>
-                                                 <td>
-                                                    <a href="#">{{number_format($sp->design_fee,2)}}</a>
-                                                </td>
+                                                 
                                             
-                                                 <td>
-                                                     @php
-                                                        $dd = json_decode($sp->design_image);
-                                                    @endphp
-                                                    @if(isset($dd) && count($dd) > 0)
-                                                    @foreach ($dd as $img )
-                                                        <img src="{{asset('/images/products/'.$img)}}" width="50px" height="50px"> 
-                                                  
-                                                    <a href="#"> <a href="{{route('design.download', encrypt($img))}}" class=" btn-primary btn-sm ">Download</a> 
-                                                    </a>
-                                                       @endforeach
-                                                    @else
-                                                    No Design image
-                                                    @endif 
-                                                    </td>
+                                                 
                                                
-                                                <td>
+                                               
                                                 {{$sp->description}}
                                                 </td>      
                                                   <td>
-                                                    <a href="#">{{$sp->created_at->format('d/M/y')}}</a>
+                                                    <a href="#">{{$sp->created_at->format('d/m/y h:ma')}}</a>
                                                 </td>
                                             </tr>
                                               @endforeach

@@ -58,10 +58,10 @@ class AdminController extends Controller
     }
 
     public function Shipping($id){
-        $cc = Shipping::where('order_No', decrypt($id))->first();
+        $order = Order::where('order_No', decrypt($id))->first();
        // dd($cc->user->id);
         return view('manage.sales.shipping')
-                ->with('shipping', Shipping::where('order_No', decrypt($id))->first())
+                ->with('shipping', Shipping::where('id', $order->shipping_id)->first())
                 ->with('bheading', 'Shipping Address')
                 ->with('breadcrumb', 'Shipping Address');
     }
@@ -77,16 +77,23 @@ class AdminController extends Controller
         $id = decrypt($id);
         $order = Order::where('order_No', $id)->first();
             //  dd($request->all());
+            
               $dd =  Order::where('order_No', $order->order_No)
                 ->update([
                 'is_delivered' => $request->delivery,
                 'dispatch_status' => $request->dispatch,
                 'is_paid' => $request->payment
                 ]);
+                if($request->payment == 1){
+                    $ref = "SFSL".rand(111111,999999);
+                    Order::where('order_No', $order->order_No)
+                    ->update(['payment_ref' => $ref]);
+                }
+
                 if($dd){
                 if($order->dispatch_status != 1 && $request->dispatch == 1){
                 $order_list = OrderItem::where('order_No', $order->order_No )->get();
-                $shipping = Shipping::where('order_No', $order->order_No )->first();
+                $shipping = Shipping::where('id', $order->shipping_id )->first();
                 //dd($shipping);
                 $datas = [
                 'order_No' => $order->order_No,
@@ -183,17 +190,17 @@ class AdminController extends Controller
     }
 
     public function Analytical(){
-        $data['users'] = User::where('updated_at', '>', Carbon::now()->subMinutes(100))->latest()->get();
+        $data['users'] = User::where('updated_at', '>=', Carbon::now()->subMinutes(10))->latest()->get();
         $data['active'] = count($data['users']);
-        $data['recentActive'] = User::where('updated_at', '>', Carbon::now()->subMinutes(100))->latest()->get();
+        $data['recentActive'] = User::where('updated_at', '>=', Carbon::now()->subMinutes(10))->latest()->get();
         $data['recent'] = count($data['recentActive']);
-        $data['new_users'] = User::where('created_at', '>', today()->subMinutes(500))->latest()->get();
-        $data['thisweek'] = User::where('created_at', '>', today()->subMinutes(500))->latest()->get();
+        $data['new_users'] = User::where('created_at', '>=', today()->subMinutes(500))->latest()->get();
+        $data['thisweek'] = User::where('created_at', '>=', today()->subMinutes(500))->latest()->get();
         $data['today'] = count( $data['new_users']);
         $data['week'] = count( $data['thisweek']);
-        $data['orders'] = Order::where('created_at', '>', Carbon::now()->subMinutes(1440))->latest()->get();
+        $data['orders'] = Order::where('created_at', '>=', Carbon::now()->subMinutes(10))->latest()->get();
         $data['order'] = count($data['orders']);
-        $data['av_orders'] = Order::where('created_at', '>', Carbon::now()->subMinutes(1080))->latest()->get();
+        $data['av_orders'] = Order::where('created_at', '>=', Carbon::now()->subMinutes(10))->latest()->get();
         $data['tt_order'] = count($data['orders']);
         return view('manage.analytical', $data)
         ->with('bheading', 'Analytics' )

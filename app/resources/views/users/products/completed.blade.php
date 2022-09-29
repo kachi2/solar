@@ -21,9 +21,11 @@
                 <div class="row mb-8">
                 @include('includes.accountNav')
                       <div class="mb-8 col-xl-9">
-						
-                      <a href="" class="btn btn-gray arrow btn-xs p-1"><< Back</a>
-                         <span style="font-size:24px">Order Details </span>  @include('includes.message') 
+                     
+                        @include('includes.message') 
+                      <br>
+                         <span style="font-size:24px">Order Details </span>  
+                         
                             <div class="borders-radius-17 border p-4 mt-4 mt-md-0 px-lg-10 px-xl-4 px-wd-10 py-lg-9 py-xl-5 py-wd-9">
                              
                             
@@ -76,8 +78,7 @@
                             <tbody>
                             <tr>
                             <td> 
-                            <p><strong>Delivery Method</strong><br>
-                            {{$orders->delivery_method}}</p>
+                          
                              
                            
                             <p> <strong>Shipping Details</strong><br>

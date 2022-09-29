@@ -120,7 +120,7 @@
                                                     <a href="#">{{$sp->payment_ref}}</a>
                                                 </td>
                                                 <td>
-                                                    <a href="#">{{$sp->payment_method}}</a>
+                                                    <a href="#">{{$sp->payment_method = 'card'? 'Card Payment' : 'Cash on Delivery'}}</a>
                                                 </td>
                                                  <td>
                                                     <a href="#">{{number_format($sp->amount,2)}}</a>

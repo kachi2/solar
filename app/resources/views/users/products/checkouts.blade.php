@@ -211,7 +211,7 @@ let amounts = {!! json_encode(\Cart::Totalfloat())!!}
  function makePayment() {
     FlutterwaveCheckout({
       public_key: _token,
-      tx_ref: "TNE"+Math.floor((Math.random() * 1000000) + 1),
+      tx_ref: "SFSL"+Math.floor((Math.random() * 1000000) + 1),
       amount: 1000,
       currency: "NGN",
       country: "NG",
