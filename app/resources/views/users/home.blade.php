@@ -102,7 +102,8 @@
 													</div>
 													<div class="flex-center-between mb-1">
 														<div class="prodcut-price">
-															<div class="text-gray-100">₦{{number_format($pro->price)}}</div>
+															<div class="text-gray-100">₦{{number_format($pro->sale_price)}}</div>
+															<del style="font-size:13px">₦{{number_format($pro->price)}}</del>
 														</div>
 														<div class="d-none d-xl-block prodcut-add-cart">
 															<a href="{{route('product-details', encrypt($pro->id))}}" class="btn-add-cart btn-primary transition-3d-hover"><i class="ec ec-add-to-cart"></i></a>
