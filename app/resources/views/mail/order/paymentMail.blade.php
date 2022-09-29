@@ -18,7 +18,7 @@
                                 align="center" valign="top">
                                 <table width="100%" cellpadding="0" cellspacing="0">
                                     <tr>
-                                        <td style="padding-bottom: 20px; "><a href="#"><img src="http://staging.Kenabprints.com/frontend/images/logo.png" alt="image"
+                                        <td style="padding-bottom: 20px; "><a href="#"><img src="http://staging.sofarsolar.ng/frontend/images/logo.png" alt="image"
                                                                                             style="height: 30px; margin-left: auto; margin-right: auto; display:block;"></a>
                                         </td>
                                     </tr>
@@ -100,7 +100,7 @@
                                         <td class="content-block aligncenter"
                                             style="font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif; font-size: 14px; vertical-align: top; text-align: center; margin: 0; padding: 0 0 20px;"
                                             align="center" valign="top">
-                                         <hr>If you have questions or issues with this payment, contact Kenabprints at orders@Kenabprints.com</td>
+                                         <hr>If you have questions or issues with this payment, contact sofarsolar at orders@sofarsolar.ng</td>
                                     </tr>
                                   
                                     <tr>

@@ -50,10 +50,10 @@ class CheckoutController extends Controller
     }
     
     public function sendMail($data){
-        Mail::to($data['email'],  'orders@Kenabprints.com')->send(new PaymentMail($data));
+        Mail::to($data['email'],  'orders@sofarsolar.ng')->send(new PaymentMail($data));
     }
      public function OrderMail($data){
-        Mail::to($data['email'], 'orders@Kenabprints.com')->send(new OrderMail($data));
+        Mail::to($data['email'], 'orders@sofarsolar.ng')->send(new OrderMail($data));
     }
 
      public function __construct()
@@ -94,7 +94,7 @@ class CheckoutController extends Controller
             'api_key' => "HJqbXNrycOO8tgehrmWqKrTOUKg65njvF6NDfd385TwGtvpq60CuGwelSRBt_test",
             'delivery_latitude' => '6.594770',
             'delivery_longitude' => '3.344280',
-            'delivery_name' => 'Kenabprints',
+            'delivery_name' => 'sofarsolar',
             'delivery_phone' => '+2348039366207',
             'delivery_address' => '1 adeolad adeoye street ikeja',
             'pickup_address' => $shipping->address.','.$shipping->city,

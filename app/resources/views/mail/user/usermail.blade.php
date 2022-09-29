@@ -61,7 +61,7 @@
                                     
                                     <tr style="font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;box-sizing:border-box;font-size:14px;margin:0">
                                         <td style="font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;box-sizing:border-box;font-size:14px;vertical-align:top;text-align:center;margin:0;padding:0 0 20px" align="center" valign="top">
-                                            Questions? Email <a href="mailto:hello@payant.ng" style="font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;box-sizing:border-box;font-size:12px;color:#999;text-decoration:underline;margin:0" target="_blank">support@Kenabprints.com</a>
+                                            Questions? Email <a href="mailto:hello@payant.ng" style="font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;box-sizing:border-box;font-size:12px;color:#999;text-decoration:underline;margin:0" target="_blank">support@sofarsolar.ng</a>
                                         </td>
                                     </tr>
                                 </tbody></table>

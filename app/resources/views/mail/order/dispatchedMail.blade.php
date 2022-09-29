@@ -10,7 +10,7 @@
                                 <table class="m_8958432110786407146tableheader" width="100%" cellspacing="0" cellpadding="0" style="vertical-align:middle">
                                     <tbody>
                                         <tr bgcolor="#ffffff">
-                                          <td style="padding: 20px 20px; "><a href="#"><img src="http://staging.Kenabprints.com/frontend/images/logo.png" alt="image"
+                                          <td style="padding: 20px 20px; "><a href="#"><img src="http://staging.sofarsolar.ng/frontend/images/logo.png" alt="image"
                                                                                             style="height: 30px; margin-left: auto; margin-right: auto; display:block;"></a>
                                         </td>
                                     </tr>
@@ -24,7 +24,7 @@
 
                                             Dear {{$data['name']}},
                                             
-                                            <p>Thank you for shopping on KenabPrints! Your order <b>{{$data['order_No']}}</b> has been successfully Dispatched.
+                                            <p>Thank you for shopping on sofarsolar! Your order <b>{{$data['order_No']}}</b> has been successfully Dispatched.
                                             </p>
 
                                                   @if($data['delivery_method'] == 'home_delivery')
@@ -72,7 +72,7 @@
     <tbody><tr><td><img src="">
 </td></tr></tbody></table>
 
-    <p>Thanks for choosing Kenabprints!</p>
+    <p>Thanks for choosing sofarsolar!</p>
 
     <p>Warm Regards,</p>
   

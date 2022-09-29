@@ -25,7 +25,7 @@ use Symfony\Component\HttpFoundation\Session\Session;
 class AdminController extends Controller
 {
       public function sendMail($data){
-        Mail::to($data['email'], 'orders@Kenabprints.com')->send(new DispatchedMail($data));
+        Mail::to($data['email'], 'orders@sofarsolar.ng')->send(new DispatchedMail($data));
     }
     
     

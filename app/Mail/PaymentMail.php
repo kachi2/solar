@@ -28,6 +28,6 @@ class PaymentMail extends Mailable
      */
     public function build()
     {
-        return $this->from('Kenabprints@tynprints.com')->subject('Payment Details')->view('mail.order.paymentMail')->with('data', $this->data);
+        return $this->from('orders@sofarsolar.ng')->subject('Payment Details')->view('mail.order.paymentMail')->with('data', $this->data);
     }
 }

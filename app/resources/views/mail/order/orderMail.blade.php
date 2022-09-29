@@ -24,12 +24,12 @@
 
                                             Dear {{$data['name']}},
                                             
-                                            <p>Thank you for shopping on Kenabprints! Your order <b>{{$data['order_No']}}</b> has been successfully confirmed.
+                                            <p>Thank you for shopping on sofarsolar! Your order <b>{{$data['order_No']}}</b> has been successfully confirmed.
                                             </p>
 
                                                    Your printing job will commence immediately, Once its out for delivery or available for pick-up you will receive a notification from us.<p>
 
-                                                    Thank you for choosing Kenabprints.        
+                                                    Thank you for choosing sofarsolar.        
                                                                          
 
                                                 <div style="padding:0 0">
@@ -122,7 +122,7 @@
     <tbody><tr><td><img src="">
 </td></tr></tbody></table>
 
-    <p>Thanks for choosing Kenabprints!</p>
+    <p>Thanks for choosing sofarsolar!</p>
 
     <p>Warm Regards,</p>
                  
