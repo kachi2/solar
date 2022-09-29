@@ -37,6 +37,7 @@
                             <div class="card-body  pb-0 px-0">
                             <h4 class="mb-3"><a href="#">{{$project->title}}</a></h4>
                             <p>{!! $project->content !!}.</p>
+                            </div>
                             
                     </article>
                     @endforeach
