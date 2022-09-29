@@ -9,10 +9,12 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 */
 
-Route::prefix('admin')->middleware('auth:admin')->group(function(){
+Route::prefix('admin')->group(function(){
     Route::post('/manage/user/login', 'Auth\AdminLoginController@login')->name('admin.login.submit');
     Route::get('/', 'AdminController@index')->middleware('auth:admin')->name('admin.index');
     Route::get('/login', 'Auth\AdminLoginController@showLogin')->name('admin-login');
+   
+    Route::middleware('auth:admin')->group(function(){ 
     Route::get('/index', 'AdminController@index')->name('admin.index')->middleware('auth:admin');
     Route::get('/', 'AdminController@index')->name('admin.index');
     Route::resource('/category', 'CategoryController');
@@ -63,6 +65,7 @@ Route::prefix('admin')->middleware('auth:admin')->group(function(){
     Route::get('/project/create', 'AdminController@ProjectCreate')->name('admin.project.create');
     Route::post('/project/store', 'AdminController@ProjectStore');
     Route::get('/project/delete/{id}', 'AdminController@ProjectDelete')->name('admin.project.delete');
+});
 });
 
 
