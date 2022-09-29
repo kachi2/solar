@@ -8,7 +8,6 @@ use App\Product;
 use App\Category;
 use App\Http\Requests\CheckoutRequest;
 use App\Traits\CheckoutStore;
-use App\Traits\decryptId;
 use App\Order;
 use App\Mail\UserMail;
 use App\Mail\OrderMail;
@@ -33,7 +32,6 @@ use Illuminate\Http\Request;
 class CheckoutController extends Controller
 {
     use CheckoutStore;
-    use decryptId;
     private $user;
     private $OrderItem;
     private $Order;
@@ -273,7 +271,7 @@ class CheckoutController extends Controller
      }
     public function update(Request $request, $id)
     {
-        $id = $this->decryptId($id);
+        $id = decrypt($id);
         $address = Shipping::where('id', $id)->first();
         $address->receiver_name = $request->receiver_name;
         $address->receiver_phone = $request->receiver_phone;

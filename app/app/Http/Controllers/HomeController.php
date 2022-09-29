@@ -14,14 +14,13 @@ use App\User;
 use App\Menu;
 use App\Slider;
 use App\Shipping;
-use App\Traits\decryptid;
 use App\Transaction;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Hash;
 
 class HomeController extends Controller
 {
-    use decryptid;
+ 
     /**
      * Create a new controller instance.
      *
@@ -54,7 +53,7 @@ class HomeController extends Controller
     }
 
     public function productDetails($id){
-        $id = $this->decryptId($id);
+        $id = decrypt($id);
    
         $product = Product::where('id', $id)->first();
         session()->push('products.recently_viewed', $product->getKey());
