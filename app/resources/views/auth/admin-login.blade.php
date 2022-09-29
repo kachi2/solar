@@ -30,7 +30,7 @@
 
 <div class="form-wrapper">
 
-                        <img class="logo" src="{{asset('/frontend/images/logo.png')}}" height="auto" width="120px">
+                        <img class="logo" src="{{asset('/images/logo.png')}}" height="auto" width="120px">
                 
     <h5>Sign in</h5>
 
