@@ -9,7 +9,7 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 */
 
-Route::prefix('admin')->group(function(){
+Route::prefix('admin')->middleware('auth:admin')->group(function(){
     Route::post('/manage/user/login', 'Auth\AdminLoginController@login')->name('admin.login.submit');
     Route::get('/', 'AdminController@index')->middleware('auth:admin')->name('admin.index');
     Route::get('/login', 'Auth\AdminLoginController@showLogin')->name('admin-login');
