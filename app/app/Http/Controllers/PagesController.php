@@ -29,7 +29,7 @@ class PagesController extends Controller
         ]);
         if($valid->fails()){
             \Session::flash('alert', 'error');
-            \Session::flash('message','Some fields are missing');
+            \Session::flash('m','Some fields are missing');
             return back();
         }
          Menu::create([
@@ -94,7 +94,7 @@ class PagesController extends Controller
             $image = $request->file('image');
             $ex = $image->getClientOriginalExtension();
             $fileName = time().'.'.$ex;
-            Image::make(request()->file('image'))->resize(1250,460)->save('images/sliders/'.$fileName);
+            Image::make(request()->file('image'))->resize(1080,500)->save('images/sliders/'.$fileName);
         }
             Slider::create([
                 'image' => $fileName,
