@@ -7,7 +7,7 @@
 	<div class="mb-5">
 		<div class="bg-img-hero" style="background-image: url('{{asset('/images/sliders/'.$sliders[0]->image)}}'); ">
 			<div class="container min-height-500 overflow-hidden">
-				<div class="js-slick-carousel u-slick" data-autoplay="true" data-speed="7000"
+				<div class="js-slick-carousel u-slick"  data-speed="7000"
 					data-pagi-classes="text-center position-absolute right-0 bottom-0 left-0 u-slick__pagination u-slick__pagination--long justify-content-start mb-3 mb-md-4 offset-xl-3 pl-2 pb-1">
 					@foreach ($sliders as $slider)
 					<div class="js-slide bg-img-hero-center">
@@ -17,7 +17,7 @@
 									data-scs-animation-in="fadeInUp">
 								</h1>
 							</div>
-							<div class="col-xl-9 col-9  d-flex align-items-center"
+							<div class="col-xl-9 col-9  "
 								data-scs-animation-delay="500"
 								data-slides-show="5"
 								data-slides-scroll="7"
