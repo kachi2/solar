@@ -78,7 +78,7 @@ Route::resource('/carts', 'CartController');
 Route::get('/delete/{id}', 'CartController@remove')->name('carts.delete');
 Route::resource('/products', 'ProductController');
 Route::get('pages/{slug}', 'PagesController@Pages')->name('pages');
-Route::get('/products/search', 'HomeController@search')->name('search');
+Route::get('/page/search', 'HomeController@search')->name('search');
 Route::get('/category/{id}', 'HomeController@Categories')->name('user.category');
 Route::post('/add-review/{id}', 'HomeController@Addreview');
 Route::get('news/details/{id}', 'PagesController@newsDetails')->name('news.details');
