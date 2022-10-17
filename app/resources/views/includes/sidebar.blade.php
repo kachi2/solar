@@ -44,7 +44,7 @@
 								<div id="headerSidebarCamerasCollapse{{$cat->id}}" class="collapse" data-parent="#headerSidebarContent">
 									<ul class="u-header-collapse__nav-list">
 										@foreach ($cat->subCategory as $cats)
-										<li><span class="u-header-sidebar__sub-menu-title">{{$cats->name}}</span></li>
+										<li><span class="u-header-sidebar__sub-menu-title"> <a href="{{route('user.category', encrypt($cat->id))}}" style="color:#000">{{$cats->name}} </a></span></li>
 										@endforeach
 										</ul>
 								</div>
