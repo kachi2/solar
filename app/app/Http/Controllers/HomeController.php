@@ -54,7 +54,6 @@ class HomeController extends Controller
 
     public function productDetails($id){
         $id = decrypt($id);
-   
         $product = Product::where('id', $id)->first();
         session()->push('products.recently_viewed', $product->getKey());
                 Product::where('id', $id)->update(['views' => $product->views + 1]);
