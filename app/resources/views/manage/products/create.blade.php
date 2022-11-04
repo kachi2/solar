@@ -76,23 +76,21 @@
                                          </div>
 
                                          <div class="col-md-12">
-                                          <div class="form-group">
-                                            
-                                            <textarea id="summernote" class="@error('specification') is-invalid @enderror" name="specification">{{old('specification')}}</textarea>
-                                             <small id="emailHelp" class="form-text text-muted">Product Specification
-                                                    </small>
+                                          <div class="custom-file">
+                                            <input type="file" name="specification" class="custom-file-input  @error('specification') is-invalid @enderror" id="customFiles">
+                                            <label class="custom-file-label" for="customFiles">Upload specification</label>
+                                          </div>
+                                          <small id="emailHelp" class="form-text text-muted"> Choose the specification PDF file 
+                                          </small>
                                                     @error('specification')
                                                     <span class="invalid-feedback"> <small> *</small> </span>
                                                     @enderror
-                                            </div>
-        
-        
                                                  </div>
 
 
-                                               <div class="col-md-6">
-                                  <div class="custom-file">
-                                            <input type="file"name="image" class="custom-file-input  @error('image') is-invalid @enderror" id="customFile">
+                                               <div class="col-md-6 pt-4">
+                                              <div class="custom-file">
+                                            <input type="file"name="image" class="custom-file-input  @error('image') is-invalid @enderror">
                                                 <label class="custom-file-label" for="customFile">Choose Cover Image</label>
                                             </div>
                                             <small id="emailHelp" class="form-text text-muted"> Choose a cover image for design sample
@@ -103,7 +101,7 @@
                                          </div>
 
                                          
-                                               <div class="col-md-6">
+                                               <div class="col-md-6 pt-4">
                                   <div class="custom-file">
                                             <input type="file"name="images[]" multiple class="custom-file-input  @error('images') is-invalid @enderror" id="customFile">
                                                 <label class="custom-file-label" for="customFile">Choose More Image</label>

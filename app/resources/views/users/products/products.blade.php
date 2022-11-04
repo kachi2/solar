@@ -199,7 +199,7 @@
                                     </div>
                                     <div class="tab-pane fade" id="Jpills-two-example1" role="tabpanel" aria-labelledby="Jpills-two-example1-tab">
                                       
-                                        <p>{!!$product->specification!!}</p>
+                                    <iframe src="{{asset('images/pdf/'.$product->specification)}}" width="800px" height="500px"> </iframe>
                                      </div>
                                    
                                     

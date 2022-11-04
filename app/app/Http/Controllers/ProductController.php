@@ -139,7 +139,17 @@ class ProductController extends Controller
         $prod->sub_category_id = $request->category_id;
         $prod->category_id = $cat->category->id;
         $prod->description = $request->description;
-        $prod->specification = $request->specification;
+        if($request->hasfile('specification') && !empty($request->file('specification')))
+          {
+            $file = request()->file('specification');
+            $name = $file->getClientOriginalName();
+            $FileName = \pathinfo($name, PATHINFO_FILENAME);
+            $ext = $file->getClientOriginalExtension();
+            $time = time().$FileName;
+            $fileName = $time.'.'.$ext;
+            $file->move('images/pdf', $fileName);
+            $prod->specification = $fileName;
+          }
         $prod->price = $request->price;
         $prod->admin_id = auth('admin')->user()->id;
         $prod->sale_price = $request->sale_price;
@@ -266,7 +276,18 @@ class ProductController extends Controller
           $prod->name= $request->name;
           $prod->category_id = $request->category_id;
           $prod->description = $request->description;
-          $prod->specification = $request->specification;
+          if($request->hasfile('specification') && !empty($request->file('specification')))
+          {
+            $file = request()->file('specification');
+            $name = $file->getClientOriginalName();
+            $FileName = \pathinfo($name, PATHINFO_FILENAME);
+            $ext = $file->getClientOriginalExtension();
+            $time = time().$FileName;
+            $fileName = $time.'.'.$ext;
+            $file->move('images/pdf', $fileName);
+            $prod->specification = $fileName;
+          }
+          
           $prod->price = $request->price;
           $prod->sale_price = $request->sale_price;
           $prod->design_fee = $request->design_fee;
