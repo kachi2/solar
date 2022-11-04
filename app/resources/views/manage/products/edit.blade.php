@@ -87,17 +87,15 @@
                                          </div>
 
                                          <div class="col-md-12">
-                                          <div class="form-group">
-                                            
-                                            <textarea id="summernote" class="@error('specification') is-invalid @enderror" name="specification"> {{$product->specification}}</textarea>
-                                             <small id="emailHelp" class="form-text text-muted">Product Specification
-                                                    </small>
+                                          <div class="custom-file">
+                                            <input type="file" name="specification" class="custom-file-input  @error('specification') is-invalid @enderror" id="customFiles">
+                                            <label class="custom-file-label" for="customFiles">Upload specification</label>
+                                          </div>
+                                          <small id="emailHelp" class="form-text text-muted"> Choose the specification PDF file 
+                                          </small>
                                                     @error('specification')
                                                     <span class="invalid-feedback"> <small> *</small> </span>
                                                     @enderror
-                                            </div>
-        
-        
                                                  </div>
 
 
