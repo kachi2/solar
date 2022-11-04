@@ -75,7 +75,7 @@
                                                             <i class="fa fa-ellipsis-v" aria-hidden="true"></i>
                                                         </a>
                                                         <div class="dropdown-menu dropdown-menu-right">
-                                                            <a href="{{route('product.variation', encrypt($sp->id))}}" class="dropdown-item">View Variations</a>
+                                                           
                                                                  <a href="{{route('product.edit', encrypt($sp->id))}}" class="dropdown-item">Edit Product</a>
                                                             @if($sp->status != 1) 
                                                             <form method="post" action="{{route('product.status', encrypt($sp->id))}}" id="form1"> 
