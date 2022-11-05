@@ -30,7 +30,6 @@
                                                 <th>Category</th>
                                                 <th>Product</th>
                                                 <th>Price</th>
-                                                  <th>Design Price</th>
                                                 <th>Image</th>
                                                 <th>Views</th>
                                                  <th>Created At</th>
@@ -52,9 +51,6 @@
                                                  <td>
                                                     <a href="#">{{number_format($sp->price,2)}}</a>
                                                 </td> 
-                                                <td>
-                                                    <a href="#">{{number_format($sp->design_fee,2)}}</a>
-                                                </td>
                                                 <td>
                                                     <a href="#"><img src="{{asset('/images/products/'.$sp->image)}}" width="50px" height="50px"></a> 
                                                 </td>  
