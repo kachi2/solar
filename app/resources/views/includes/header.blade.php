@@ -192,16 +192,16 @@
                                                     <a id="basicMegaMenu" class="nav-link u-header__nav-link u-header__nav-link-toggle" href="{{route('user.category', encrypt($cat->id))}}" aria-haspopup="true" aria-expanded="false">{{$cat->name}}</a>
                                                     <div class="hs-mega-menu vmm-tfw u-header__sub-menu" aria-labelledby="basicMegaMenu">
                                                         <div class="row u-header__mega-menu-wrapper">
-                                                            @foreach ($cat->subCategory as $cats)
+                                                          
                                                             <div class="col mb-3 mb-sm-0">
-                                                                <span class="u-header__sub-menu-title">{{$cats->name}}</span>
+                                                                <span class="u-header__sub-menu-title">{{$cat->name}}</span>
                                                                 <ul class="u-header__sub-menu-nav-group">
-                                                                    @foreach($cats->products as $pro)
+                                                                    @foreach($cat->products as $pro)
                                                                     <li><a class="nav-link u-header__sub-menu-nav-link" href="{{route('product-details', encrypt($pro->id))}}">{{$pro->name}}</a></li>
                                                                     @endforeach
                                                                 </ul>
                                                             </div>
-                                                            @endforeach
+                                                           
                                                         </div>
                                                     </div>
                                                 </li>

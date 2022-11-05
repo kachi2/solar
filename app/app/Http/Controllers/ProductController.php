@@ -136,7 +136,8 @@ class ProductController extends Controller
       try{
         $prod = new Product;
         $prod->name= $request->name;
-        $prod->sub_category_id = $request->category_id;
+        $prod->category_id = $request->category_id;
+        $prod->sub_category_id = null;
         $prod->category_id = $cat->category->id;
         $prod->description = $request->description;
         if($request->hasfile('specification') && !empty($request->file('specification')))
