@@ -60,18 +60,6 @@
                                             @enderror
                                         </div>           
                               </div>
-                                <div class="col-md-6">
-                                        <div class="form-group">
-                                           <input type="text" name="design_fee"  value="{{$product->design_fee}}"class="form-control @error('design_fee') is-invalid @enderror" id="exampleInput"
-                                                   aria-describedby="EventLocation" placeholder="Design Fee">
-                                            <small id="emailHelp" class="form-text text-muted"> Design Fee
-                                            </small>
-                                            @error('design_fee')
-                                            <span class="invalid-feedback"> <small> * </small> </span>
-                                            @enderror
-                                        </div>
-                                </div>
-
                                          <div class="col-md-12">
                                   <div class="form-group">
                                     
