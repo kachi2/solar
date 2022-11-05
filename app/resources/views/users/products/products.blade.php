@@ -199,10 +199,9 @@
                                  
                                     </div>
                                     <div class="tab-pane fade" id="Jpills-two-example1" role="tabpanel" aria-labelledby="Jpills-two-example1-tab">
-                                        {{asset('images/pdf/'.$product->specification)}}
+                                      
                                       @if(isset($product->specification))
                                     <iframe src="{{asset('images/pdf/'.$product->specification)}}" width="800px" height="500px"> </iframe>
-                                   
                                     @endif
                                      </div>
                                    
