@@ -202,7 +202,7 @@ let total = parseInt(total_paid) + parseInt(fare);
 
 
 
-var _token = "FLWPUBK_TEST-6de03fa2319f26d79b72366abcb70f64-X";
+var _token = "FLWPUBK-14e05fab796f2dc5351335b24b4898d5-X";
 let email = {!! json_encode(auth()->user()->email) !!};
 let phone = {!! json_encode(auth()->user()->phone) !!};
 let name = {!! json_encode(auth()->user()->name) !!};
@@ -212,7 +212,7 @@ let amounts = {!! json_encode(\Cart::Totalfloat())!!}
     FlutterwaveCheckout({
       public_key: _token,
       tx_ref: "SFSL"+Math.floor((Math.random() * 1000000) + 1),
-      amount: 1000,
+      amount: amounts,
       currency: "NGN",
       country: "NG",
       payment_options: "card, ussd",
