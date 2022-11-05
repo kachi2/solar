@@ -101,7 +101,7 @@ class ProductController extends Controller
         return view('manage.products.create')
                     ->with('bheading', 'Products')
                     ->with('breadcrumb', 'Create Product')
-                    ->with('category', SubCategory::all());
+                    ->with('category', Category::all());
     }
 
     /**
