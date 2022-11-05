@@ -19,9 +19,6 @@
 		</div>
 	</div>
 		
-
-
-		
             <div class="container">
                     <div class="row">
 						<div style="" class="mb-7 mb-lg-0 p-3">
