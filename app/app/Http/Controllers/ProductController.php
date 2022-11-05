@@ -147,7 +147,7 @@ class ProductController extends Controller
             $ext = $file->getClientOriginalExtension();
             $time = time().$FileName;
             $fileName = $time.'.'.$ext;
-            $file->move('/images/pdf',$fileName);
+            $file->move('images/pdf',$fileName);
             $prod->specification = $fileName;
           }
         $prod->price = $request->price;
