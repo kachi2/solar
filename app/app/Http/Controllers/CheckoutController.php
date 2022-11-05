@@ -60,7 +60,7 @@ class CheckoutController extends Controller
          $this->OrderItem = new OrderItem();
          $this->Order = new Order();
          $this->Shipping = new Shipping();
-         $this->API_Token = 'FLWSECK-b1e132bbedfa0858a25273924e60ef04-X';
+         $this->API_Token = env('FLUTTERWAVE_KEY');
      }
      public function getCustomerLocation($address){
         $key = 'AIzaSyCHsIJX1EHXN_tLXbQ75pMHcB60L3XVOeU';

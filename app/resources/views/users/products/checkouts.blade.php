@@ -202,7 +202,8 @@ let total = parseInt(total_paid) + parseInt(fare);
 
 
 
-var _token = "FLWPUBK-14e05fab796f2dc5351335b24b4898d5-X";
+
+var _token = {!!  json_encode(env('FLUTTERWAVE_PUB_KEY'))!!}
 let email = {!! json_encode(auth()->user()->email) !!};
 let phone = {!! json_encode(auth()->user()->phone) !!};
 let name = {!! json_encode(auth()->user()->name) !!};
