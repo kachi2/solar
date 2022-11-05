@@ -196,10 +196,10 @@
                                     <div class="tab-pane fade active show" id="Jpills-one-example1" role="tabpanel" aria-labelledby="Jpills-one-example1-tab">
                                       
                                        <p>{!!$product->description!!}</p>
-                                     
+                                     {{dd($product->specificatio)}}
                                     </div>
                                     <div class="tab-pane fade" id="Jpills-two-example1" role="tabpanel" aria-labelledby="Jpills-two-example1-tab">
-                                      @if(isset($product->specification))
+                                      @if($product->specification != null)
                                     <iframe src="{{asset('images/pdf/'.$product->specification)}}" width="800px" height="500px"> </iframe>
                                     @endif
                                      </div>
