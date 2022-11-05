@@ -58,7 +58,7 @@
                             </div>
                             <div class="media-body">
                                 <h4 class="font-size-14 mb-1"><a href="#" class="text-gray-39">{{$post->title}}</a></h4>
-                                <span class="text-gray-5">  {!! $project->content !!}.</span>
+                                <span class="text-gray-5">  {!! $post->content !!}.</span>
                             </div>
                         </div>
                     </article>
