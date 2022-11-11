@@ -68,8 +68,9 @@
                                             <h3 class="text-lh-1dot2 font-size-14 mb-0"><a href="{{route('product-details',encrypt($prods->id))}}">{{$prods->name}}</a></h3>
                                            
                                             <div class="font-weight-bold">
-                                                <del class="font-size-15 text-gray-9 d-block">₦{{number_format($prods->price)}}</del>
-                                                <ins class="font-size-15 text-red text-decoration-none d-block">₦{{number_format($prods->sale_price)}}</ins>
+                                                <del class="font-size-15 text-gray-9 d-block">₦{{number_format($prods->price)}} </del>
+                                                
+                                                <ins class="font-size-15 text-red text-decoration-none d-block">₦{{number_format($prods->sale_price)}} / <span style="color:rgb(15, 15, 79); font-size:14px"> {{number_format($prods->exchange_rate)}}  USD </span></ins>
                                             </div>
                                         </div>
                                     </div>
@@ -132,9 +133,9 @@
                                         </div>
                                         <div class="mb-4">
                                             <div class="d-flex align-items-baseline">
-                                              <ins class="font-size-36 text-decoration-none">₦{{number_format($product->sale_price)}}</ins>
+                                              <ins class="font-size-36 text-decoration-none">₦{{number_format($product->sale_price)}} <span style="color:rgb(15, 15, 79); font-size:14px"> {{number_format($prods->exchange_rate)}}  USD </span></ins>
                                         <del class="font-size-20 ml-2 text-gray-6">₦{{number_format($product->price)}}</del>
-                                            </div>
+                                             </div>
                                         </div>
                                       
                                         <div class="d-md-flex align-items-end mb-3">

@@ -55,7 +55,8 @@
                                     </td>
 
                                     <td data-title="Price">
-                                        <span class="">{{number_format($carts->price)}}</span><br>
+                                        <span class="">₦{{number_format($carts->price)}}</span> / <span style="color:rgb(15, 15, 79); font-size:14px"> {{number_format($carts->model->exchange_rate)}} USD </span><br>
+                                     
                                         <del style="color:red">{{number_format($carts->model->price)}}</del>
                                     </td>
                                 

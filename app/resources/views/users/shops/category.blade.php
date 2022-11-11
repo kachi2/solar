@@ -73,9 +73,9 @@
 										<img src="{{asset('/images/products/'.$product->image)}}" alt="{{$product->name}}">
 									</div>
 									<div class="product-info">
-										<a href="{{url('/products/details',$name.'_'.encrypt($product->id))}}" title="product" class="product-name">{{$product->name}}</a>
+										<a href="{{url('/products/details',$name.'_'.encrypt($product->id))}}" titl e="product" class="product-name">{{$product->name}}</a>
 										<div class="price-box">
-											FROM <span class="normal-price">{{number_format($product->sale_price)}}</span>
+										 <span class="normal-price">{{number_format($product->sale_price)}}/ <span style="color:rgb(15, 15, 79); font-size:14px"> {{number_format($prods->exchange_rate)}}  USD </span></span>
 										</div>	 <br>
                                         	<a href="{{url('/products/details',$name.'_'.encrypt($product->id))}}" class="btn-readmore order-now">Order now</a>
 						

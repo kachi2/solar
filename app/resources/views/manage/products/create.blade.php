@@ -43,6 +43,17 @@
                                             @enderror
                                         </div>           
                               </div>
+                              <div class="col-md-6">
+                                <div class="form-group">
+                                   <input type="text" name="exchange_rate"  value="{{old('exchange_rate')}}" class="form-control @error('exchange_rate') is-invalid @enderror" id="exampleInputEmail1"
+                                          aria-describedby="emailHelp" placeholder="Price in USD">
+                                   <small id="emailHelp" class="form-text text-muted">Price in USD($)
+                                   </small>
+                                   @error('exchange_rate')
+                                   <span class="invalid-feedback"> <small> {{$message}}</small> </span>
+                                   @enderror
+                               </div>           
+                     </div>
 
                                       <div class="col-md-12">
                                          <div class="form-group">

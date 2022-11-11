@@ -16,7 +16,7 @@ class Product extends Model
         'price' ,
         'sale_price',
         'percentage',
-        'design_fee'
+        'exchange_rate'
     ];
 
     

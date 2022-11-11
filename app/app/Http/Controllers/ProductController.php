@@ -153,7 +153,7 @@ class ProductController extends Controller
         $prod->price = $request->price;
         $prod->admin_id = auth('admin')->user()->id;
         $prod->sale_price = $request->sale_price;
-        $prod->design_fee = $request->design_fee;
+        $prod->exchange_rate = $request->exchange_rate;
         if($request->file('image')){
             $file = request()->file('image');
             $name = $file->getClientOriginalName();
@@ -276,6 +276,7 @@ class ProductController extends Controller
           $prod->name= $request->name;
           $prod->category_id = $request->category_id;
           $prod->description = $request->description;
+          $prod->exchange_rate = $request->exchange_rate;
           if($request->hasfile('specification') && !empty($request->file('specification')))
           {
             $file = request()->file('specification');
