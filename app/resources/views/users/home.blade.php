@@ -152,7 +152,7 @@
 							</div>
 							<div class="flex-center-between mb-1">
 								<div class="prodcut-price">
-									<div class="text-gray-100">₦{{number_format($pro->sale_price)}} / <span style="color:rgb(15, 15, 79); font-size:14px"> {{number_format($pro->exchange_rate)}} USD </span></div>
+									<div class="text-gray-100">₦{{number_format($recent->sale_price)}} / <span style="color:rgb(15, 15, 79); font-size:14px"> {{number_format($recent->exchange_rate)}} USD </span></div>
 											 <del style="font-size:13px">₦{{number_format($recent->price)}}</del>
 								</div>
 								<div class="d-none d-xl-block prodcut-add-cart">
