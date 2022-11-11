@@ -49,7 +49,7 @@
                                                     <a href="#">{{$sp->name}}</a>
                                                 </td>
                                                  <td>
-                                                    <a href="#">{{number_format($sp->price,2)}}</a>
+                                                    <a href="#">{{number_format($sp->sale_price,2)}}</a>
                                                 </td> 
                                                 <td>
                                                     <a href="#"><img src="{{asset('/images/products/'.$sp->image)}}" width="50px" height="50px"></a> 
