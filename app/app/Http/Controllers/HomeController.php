@@ -47,7 +47,7 @@ class HomeController extends Controller
                }
         return view('users.home', $data)
             ->with('title', 'Index') 
-            ->with('products', Product::latest()->simplePaginate(30))
+            ->with('products', Product::latest()->simplePaginate(50))
             ->with('sliders', Slider::get())
             ->with('categories', Category::take(4)->get());
     }
