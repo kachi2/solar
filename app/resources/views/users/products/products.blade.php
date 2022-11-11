@@ -133,7 +133,7 @@
                                         </div>
                                         <div class="mb-4">
                                             <div class="d-flex align-items-baseline">
-                                              <ins class="font-size-36 text-decoration-none">₦{{number_format($product->sale_price)}} <span style="color:rgb(15, 15, 79); font-size:14px"> {{number_format($prods->exchange_rate)}}  USD </span></ins>
+                                              <ins class="font-size-36 text-decoration-none">₦{{number_format($product->sale_price)}} <span style="color:rgb(15, 15, 79); font-size:14px"> {{number_format($product->exchange_rate)}}  USD </span></ins>
                                         <del class="font-size-20 ml-2 text-gray-6">₦{{number_format($product->price)}}</del>
                                              </div>
                                         </div>
@@ -353,7 +353,7 @@
                                         </div>
                                         <div class="flex-center-between mb-1">
                                             <div class="prodcut-price">
-                                                  <div class="text-gray-100">₦{{number_format($recents->sale_price)}}</div>
+                                                  <div class="text-gray-100">₦{{number_format($recents->sale_price)}} <span style="color:rgb(15, 15, 79); font-size:14px"> {{number_format($recents->exchange_rate)}}  USD </span></div>
                                                          <del style="font-size:13px">₦{{number_format($recents->price)}}</del>
                                             </div>
                                             <div class="d-none d-xl-block prodcut-add-cart">
@@ -392,7 +392,7 @@
                                         </div>
                                         <div class="flex-center-between mb-1">
                                             <div class="prodcut-price">
-                                                    <div class="text-gray-100">₦{{number_format($related_pro->sale_price)}}</div>
+                                                    <div class="text-gray-100">₦{{number_format($related_pro->sale_price)}}  <span style="color:rgb(15, 15, 79); font-size:14px"> {{number_format($related_pro->exchange_rate)}}  USD </span></div>
                                                     <del style="font-size:13px">₦{{number_format($related_pro->price)}}</del>
                                             </div>
                                             <div class="d-none d-xl-block prodcut-add-cart">
