@@ -196,8 +196,8 @@
                                                             <div class="col mb-3 mb-sm-0">
                                                                 <span class="u-header__sub-menu-title">{{$cat->name}}</span>
                                                                 <ul class="u-header__sub-menu-nav-group">
-                                                                    @foreach($cat->products as $pro)
-                                                                    <li><a class="nav-link u-header__sub-menu-nav-link" href="{{route('product-details', encrypt($pro->id))}}">{{$pro->name}}</a></li>
+                                                                    @foreach($cat->subCategory as $pro)
+                                                                    <li><a class="nav-link u-header__sub-menu-nav-link" href="{{route('user.category', encrypt($pro->id))}}">{{$pro->name}}</a></li>
                                                                     @endforeach
                                                                 </ul>
                                                             </div>
