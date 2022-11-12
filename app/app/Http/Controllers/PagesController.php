@@ -143,7 +143,7 @@ class PagesController extends Controller
                 break;
             default:
             
-            return 404;
+            return view('errors.404');
             break;
         }
 
