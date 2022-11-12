@@ -143,6 +143,7 @@ class PagesController extends Controller
                 ->with('contact', ContactUs::latest()->first());
                 break;
             default:
+            dd(ContactUs::latest()->first());
             return 404;
             break;
         }
