@@ -138,6 +138,7 @@ class PagesController extends Controller
                 return view('users.pages.about');
              break;
             case "contact":
+                dd(ContactUs::latest()->first());
                 return view('users.pages.contact')
                 ->with('contact', ContactUs::latest()->first());
                 break;
