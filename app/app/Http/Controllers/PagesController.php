@@ -116,6 +116,7 @@ class PagesController extends Controller
     }
 
     public function Pages($slug){
+        dd(ContactUs::latest()->first());
         switch($slug){
             case "home":
                 return app('App\Http\Controllers\HomeController')->Index();
@@ -138,12 +139,12 @@ class PagesController extends Controller
                 return view('users.pages.about');
              break;
             case "contact":
-                dd(ContactUs::latest()->first());
+                
                 return view('users.pages.contact')
                 ->with('contact', ContactUs::latest()->first());
                 break;
             default:
-            dd(ContactUs::latest()->first());
+            
             return 404;
             break;
         }
