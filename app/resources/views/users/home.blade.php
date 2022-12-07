@@ -37,7 +37,7 @@
 							"slidesToShow": 1
 						}
 					}]'>
-								<video   controls autoplay muted height="380px" width="100%">  
+								<video   controls autoplay muted height="400px" width="100%">  
 									<source  src="{{asset('/vide.mp4')}}" type="video/mp4">
 									 </video>
 							</div>
