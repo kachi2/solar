@@ -7,8 +7,43 @@
 	<div class="mb-5">
 		<div class="bg-img-hero" style="background-image: url('{{asset('/images/sliders/'.$sliders[0]->image)}}'); ">
 			<div class="container min-height-500 overflow-hidden">
-				<div class="js-slick-carousel u-slick" data-autoplay="true" data-speed="7000"
+				<div class="js-slick-carousel u-slick" data-autoplay="false" data-speed="50" 
 					data-pagi-classes="text-center position-absolute right-0 bottom-0 left-0 u-slick__pagination u-slick__pagination--long justify-content-start mb-3 mb-md-4 offset-xl-5 pl-2 pb-1">
+					<div class="js-slide bg-img-hero-center">
+						<div class="row min-height-500 py-1 py-md-0">
+							<div class="col-xl-2 col-xl-2 col-1 mt-md-2">
+								<h1 class="font-size-64 text-lh-57 font-weight-light"
+									data-scs-animation-in="fadeInUp">
+								</h1>
+							</div>
+							<div class="col-xl-8 col-8  d-flex align-items-center"
+								data-scs-animation-delay="500"
+								data-slides-show=""
+								data-slides-scroll="7"
+								data-scs-animation-in="fadeIn"
+								data-responsive='[{
+									"breakpoint": 992,
+						"settings": {
+							"slidesToShow": 5
+						}
+					}, {
+						"breakpoint": 768,
+						"settings": {
+							"slidesToShow": 1
+						}
+					}, {
+						"breakpoint": 554,
+						"settings": {
+							"slidesToShow": 1
+						}
+					}]'>
+								<video   controls autoplay muted height="380px" width="100%">  
+									<source  src="{{asset('/vide.mp4')}}" type="video/mp4">
+									 </video>
+							</div>
+						</div>
+					</div>
+					
 					@foreach ($sliders as $slider)
 					<div class="js-slide bg-img-hero-center">
 						<div class="row min-height-500 py-1 py-md-0">
